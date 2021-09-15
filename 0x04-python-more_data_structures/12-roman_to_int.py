@@ -4,8 +4,14 @@ def roman_to_int(roman_string):
     if not isinstance(roman_string, str) or roman_string is None:
         return 0
     result = 0
-    for c in roman_string:
+    for i, c in enumerate(roman_string):
         if roman_constant.get(c) is None:
             return 0
-        result += roman_constant.get(c)
+        if len(roman_string) > i + 1:
+            if roman_constant.get(c) < roman_constant.get(roman_string[i + 1]):
+                result -= roman_constant.get(c)
+            else:
+                result += roman_constant.get(c)
+        else:
+            result += roman_constant.get(c)
     return result
