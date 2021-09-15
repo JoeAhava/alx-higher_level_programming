@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import sys
-
 '''
     A function to get a square of a matrix elements
 '''
@@ -13,5 +11,5 @@ def square_matrix_simple(matrix):
 
 '''
 if not __name__ == "__main__":
-    sys.exit()
+    // Execute a test
 '''
