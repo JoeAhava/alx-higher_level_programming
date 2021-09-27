@@ -3,7 +3,7 @@ def safe_print_list(my_list=[], x=0):
     counter = 0
     try:
         while counter <= x:
-            print(my_list[counter], end='')
+            print("{}".format(my_list[counter]), end='')
             counter += 1
 
     except IndexError:
