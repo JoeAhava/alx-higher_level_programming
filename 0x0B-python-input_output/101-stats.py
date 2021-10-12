@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """check stdin"""
 import sys
 
