@@ -15,7 +15,7 @@ if __name__ == '__main__':
     cursor.execute('''
             SELECT *
             FROM states
-            WHERE name REGEXP "^N"
+            WHERE REGEXP_LIKE(name,'^N', 'c')
             ORDER BY id ASC
         ''')
     [print(state) for state in cursor.fetchall()]
