@@ -15,9 +15,16 @@ if __name__ == '__main__':
     cursor.execute('''
             SELECT c.id, c.name, s.name
             FROM cities as c
-            INNER JOIN states as s
+            LEFT JOIN states as s
             ON c.state_id = s.id
             WHERE s.name = '{name}'
             ORDER BY id ASC
         '''.format(name=sys.argv[4]))
-    [print(state) for state in cursor.fetchall()]
+    result = cursor.fetchall()
+    count = 0
+    for state in result:
+        if count == len(result) - 1:
+            print(state[1])
+            break
+        print(state[1], end=", ")
+        count += 1
