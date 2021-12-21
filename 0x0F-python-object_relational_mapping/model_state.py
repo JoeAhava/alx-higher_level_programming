@@ -3,6 +3,7 @@ from sqlalchemy import Column, String, Integer
 
 Base = declarative_base()
 
+
 class State(Base):
     '''
     represents a state data
@@ -19,4 +20,3 @@ class State(Base):
     name = Column(
             String(128),
             nullable=False)
-
