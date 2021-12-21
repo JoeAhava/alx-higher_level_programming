@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
-#   Lists all states from a database containing states data
-#   USAGE:
-#    ./0-select_states.py <USER_NAME> mysql <PASSWORD> <DATABASE_NAME>
-
+'''
+Lists all states from a database containing states data
+USAGE:
+    ./0-select_states.py <USER_NAME> mysql <PASSWORD> <DATABASE_NAME>
+'''
 
 import sys
 import MySQLdb
