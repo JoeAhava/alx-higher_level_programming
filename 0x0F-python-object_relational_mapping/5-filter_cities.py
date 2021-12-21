@@ -24,7 +24,9 @@ if __name__ == '__main__':
     count = 0
     for state in result:
         if count == len(result) - 1:
-            print(state[1])
+            print(state[1], end="")
             break
         print(state[1], end=", ")
         count += 1
+
+    print()
