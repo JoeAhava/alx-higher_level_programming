@@ -20,12 +20,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).filter(
-                State.name == sys.argv[4])
-    no_result = True
-    for state in states:
-        no_result = False
-        print("{id}: {name}".format(
-            id=state.id,
-            name=state.name))
-    if no_result:
+                State.name == sys.argv[4]).count()
+    if states == 0:
         print("Not Found")
+    else:
+        print(states)
