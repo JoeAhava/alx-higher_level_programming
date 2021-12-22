@@ -24,4 +24,5 @@ if __name__ == '__main__':
     session.flush()
     session.refresh(louisiana)
     print(louisiana.id)
+    session.commit()
     session.close()
