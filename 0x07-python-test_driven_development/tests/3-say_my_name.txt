@@ -1,0 +1,67 @@
+This test file tests the module 3-say_my_name.py
+--------------------------------------------
+
+case 0:
+    importing succesfully
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>>
+
+---------------------------------------------
+
+case 1:
+    two input string
+
+>>> say_my_name("Heimer", "Rojas")
+My name is Heimer Rojas
+>>>
+
+---------------------------------------------
+
+case 2:
+    first imput no string
+
+>>> say_my_name(23, "Rojas")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>>
+
+---------------------------------------------
+
+case 3:
+    second imput no string
+
+>>> say_my_name("Heimer", 23)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+>>>
+
+---------------------------------------------
+
+case 4:
+    both inputs no string
+
+>>> say_my_name(23, 23)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>>
+
+----------------------------------------------
+
+case 5:
+    empty first name
+
+>>> say_my_name("", "Rojas")
+My name is  Rojas
+>>>
+
+----------------------------------------------
+
+case 6:
+    missing arguments
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>>
+

@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+'''
+    A function to delete by key in a dictionary
+'''
+
+
+def simple_delete(a_dictionary, key=""):
+    if a_dictionary.get(key) is not None:
+        del a_dictionary[key]
+    return a_dictionary
+
+
+'''
+if not __name__ == "__main__":
+    // Execute a test
+'''
